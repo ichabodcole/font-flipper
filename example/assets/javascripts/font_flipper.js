@@ -3,8 +3,8 @@
 
   window.FontFlipper = (function() {
 
-    function FontFlipper(fonts, strip, logFonts, el) {
-      this.strip = strip != null ? strip : false;
+    function FontFlipper(fonts, stripGoogle, logFonts, el) {
+      this.stripGoogle = stripGoogle != null ? stripGoogle : false;
       this.logFonts = logFonts != null ? logFonts : false;
       this.el = el != null ? el : '.font-flipper';
       this.fonts = this.parseFonts(fonts);
@@ -22,7 +22,7 @@
     };
 
     FontFlipper.prototype.parseFonts = function(fonts) {
-      if (!this.strip) {
+      if (!this.stripGoogle) {
         return fonts;
       } else {
         return this.stripGoogleString(fonts);

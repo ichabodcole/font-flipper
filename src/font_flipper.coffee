@@ -1,5 +1,5 @@
 class window.FontFlipper
-  constructor: (fonts, @strip=false, @logFonts=false, @el='.font-flipper')->
+  constructor: (fonts, @stripGoogle=false, @logFonts=false, @el='.font-flipper')->
     @fonts = @parseFonts(fonts)
     @num_fonts = @fonts.length
     @cur_font_index = 0
@@ -11,7 +11,7 @@ class window.FontFlipper
       _self.flip();
 
   parseFonts: (fonts)->
-    unless @strip then fonts else @stripGoogleString(fonts)
+    unless @stripGoogle then fonts else @stripGoogleString(fonts)
 
   stripGoogleString: (fontString)->
     fontString.replace(/\+/g, ' ').replace(/((:|,)[\d]+(italic)*)|(:|,)/g, '').split('|')
