@@ -11,10 +11,10 @@
   #### Extras
     FontFlipper can take a few additional arugments in its constructor to make your life easier.
     FontFlipper(fonts, stripGoogle=false, log=false, el=".font-flipper")
-      fonts: an array of string font names associated with a loaded or available font.
-      stripGoogle: when set to true allows you to pass a string into the fonts arugment in Googles webfont include format. Defaults to false.
-      log: when set to true will log the name of the font in the browser console when it's flipped to. Defaults to false.
-      el: the class or id that FontFlipper should hook into. Defaults to ".font-flipper"
+      * fonts: an array of string font names associated with a loaded or available font.
+      * stripGoogle: when set to true allows you to pass a string into the fonts arugment in Googles webfont include * format. Defaults to false.
+      * log: when set to true will log the name of the font in the browser console when it's flipped to. Defaults to false.
+      * el: the class or id that FontFlipper should hook into. Defaults to ".font-flipper"
 
 
 ###Requirements:
