@@ -1,10 +1,11 @@
 body{
   text-align: center;
-  background-color: grey;
+  background-color: gray;
 }
 
 h1{
   color: white;
   font-size: 5em;
   margin: 200px auto;
+  text-shadow: 0 1px 3px black;
 }

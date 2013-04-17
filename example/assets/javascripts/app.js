@@ -3,7 +3,7 @@
 
   $(function() {
     var font_flipper, font_list;
-    font_list = 'Wire+One|Josefin+Sans|Rationale|Tulpen+One|Dorsa|Open+Sans+Condensed:300:500|Raleway';
+    font_list = 'Nosifer|Fascinate|Codystar:300,400|Eater|Poiret+One|The+Girl+Next+Door|Fugaz+One|Shojumaru|Meie+Script|Fondamento:400italic,400|Risque|Miss+Fajardose|Sacramento';
     return font_flipper = new FontFlipper(font_list, true);
   });
 

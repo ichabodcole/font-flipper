@@ -2,6 +2,7 @@ class window.FontFlipper
   constructor: (fonts, @strip=false, @logFonts=false)->
     @el = ".font-flipper"
     @fonts = @parseFonts(fonts)
+    console.log @fonts
     @num_fonts = @fonts.length
     @cur_font_index = 0
     @setEventHandlers()
@@ -15,7 +16,7 @@ class window.FontFlipper
     unless @strip then fonts else @stripGoogleString(fonts)
 
   stripGoogleString: (fontString)->
-    fontString.replace(/\+/g, ' ').replace(/(:+[0-9]+)+/, '').split('|')
+    fontString.replace(/\+/g, ' ').replace(/(italic)|[:,\d]/g, '').split('|')
 
   increment: ->
     if @cur_font_index < @num_fonts-1

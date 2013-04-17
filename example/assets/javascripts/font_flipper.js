@@ -8,6 +8,7 @@
       this.logFonts = logFonts != null ? logFonts : false;
       this.el = ".font-flipper";
       this.fonts = this.parseFonts(fonts);
+      console.log(this.fonts);
       this.num_fonts = this.fonts.length;
       this.cur_font_index = 0;
       this.setEventHandlers();
@@ -30,7 +31,7 @@
     };
 
     FontFlipper.prototype.stripGoogleString = function(fontString) {
-      return fontString.replace(/\+/g, ' ').replace(/(:+[0-9]+)+/, '').split('|');
+      return fontString.replace(/\+/g, ' ').replace(/(italic)|[:,\d]/g, '').split('|');
     };
 
     FontFlipper.prototype.increment = function() {
