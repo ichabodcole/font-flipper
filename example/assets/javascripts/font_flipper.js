@@ -3,12 +3,11 @@
 
   window.FontFlipper = (function() {
 
-    function FontFlipper(fonts, strip, logFonts) {
+    function FontFlipper(fonts, strip, logFonts, el) {
       this.strip = strip != null ? strip : false;
       this.logFonts = logFonts != null ? logFonts : false;
-      this.el = ".font-flipper";
+      this.el = el != null ? el : '.font-flipper';
       this.fonts = this.parseFonts(fonts);
-      console.log(this.fonts);
       this.num_fonts = this.fonts.length;
       this.cur_font_index = 0;
       this.setEventHandlers();
@@ -31,7 +30,7 @@
     };
 
     FontFlipper.prototype.stripGoogleString = function(fontString) {
-      return fontString.replace(/\+/g, ' ').replace(/(italic)|[:,\d]/g, '').split('|');
+      return fontString.replace(/\+/g, ' ').replace(/((:|,)[\d]+(italic)*)|(:|,)/g, '').split('|');
     };
 
     FontFlipper.prototype.increment = function() {
