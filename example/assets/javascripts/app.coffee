@@ -1,3 +1,3 @@
 $ ->
   font_list = 'ABeeZee:400,400italic|PT+Sans:400,700,400italic,700italic|Noto+Serif:400,700,700italic|Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic|Exo:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,700italic,900italic,800italic,600italic,500italic,400italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700|Roboto'
-  font_flipper = new FontFlipper(font_list, true, true)
+  fontFlipper = new FontFlipper(font_list, true, true)

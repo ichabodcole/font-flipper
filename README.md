@@ -2,7 +2,7 @@
   A tiny JavaScript library that helps you quickly preview different fonts on an html page simply by clicking text.
 
 ### Usage:
-  1. Include the font_flipper.js file in your html page.
+  1. Include the font-flipper.js file in your html page.
   2. Within a page ready function add the following:  
 
         $(function(){
